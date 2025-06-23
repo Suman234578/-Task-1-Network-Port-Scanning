@@ -1,1 +1,157 @@
+# Nmap 7.95 scan initiated Mon Jun 23 21:32:31 2025 as: /usr/lib/nmap/nmap --privileged -A --min-rate=5000 -oN scan_results.txt 192.168.31.182
+Nmap scan report for 192.168.31.182
+Host is up (0.00055s latency).
+Not shown: 991 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           OpenSSH 9.9 (protocol 2.0)
+| ssh-hostkey: 
+|   256 b6:30:73:77:82:26:1b:ff:75:89:7b:a1:f4:37:b7:d6 (ECDSA)
+|_  256 e3:ca:53:a9:80:8c:6e:ac:fc:1b:e1:2d:dc:7e:51:ed (ED25519)
+53/tcp   open  domain?
+88/tcp   open  kerberos-sec  Heimdal Kerberos (server time: 2025-06-23 16:02:37Z)
+445/tcp  open  microsoft-ds?
+3031/tcp open  eppc?
+| fingerprint-strings: 
+|   X11Probe: 
+|_    PPCT
+3283/tcp open  netassistant?
+5000/tcp open  rtsp
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/860.7.1
+|     X-Apple-ProcessingTime: 0
+|     X-Apple-RequestReceivedTimestamp: 203811029
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/860.7.1
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 203805992
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/860.7.1
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 203811009
+|   RTSPRequest: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/860.7.1
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 203806007
+|   SIPOptions: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/860.7.1
+|     CSeq: 42 OPTIONS
+|     X-Apple-ProcessingTime: 0
+|_    X-Apple-RequestReceivedTimestamp: 203811051
+5900/tcp open  vnc           Apple remote desktop vnc
+| vnc-info: 
+|   Protocol version: 3.889
+|   Security types: 
+|     Apple Remote Desktop (30)
+|     Unknown security type (33)
+|     Unknown security type (36)
+|_    Mac OS X security type (35)
+7000/tcp open  rtsp
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/860.7.1
+|     X-Apple-ProcessingTime: 0
+|     X-Apple-RequestReceivedTimestamp: 203811045
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/860.7.1
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 203811004
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/860.7.1
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 203811027
+|   RTSPRequest: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/860.7.1
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 203805977
+|   SIPOptions: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/860.7.1
+|     CSeq: 42 OPTIONS
+|     X-Apple-ProcessingTime: 0
+|_    X-Apple-RequestReceivedTimestamp: 203811056
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+|_irc-info: Unable to open connection
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3031-TCP:V=7.95%I=7%D=6/23%Time=68597AAF%P=aarch64-unknown-linux-gn
+SF:u%r(X11Probe,C,"PPCT\0\0\0\x01\0\0\0\0");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5000-TCP:V=7.95%I=7%D=6/23%Time=68597A9D%P=aarch64-unknown-linux-gn
+SF:u%r(GetRequest,8F,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Length:\x20
+SF:0\r\nServer:\x20AirTunes/860\.7\.1\r\nX-Apple-ProcessingTime:\x201\r\nX
+SF:-Apple-RequestReceivedTimestamp:\x20203805992\r\n\r\n")%r(RTSPRequest,8
+SF:F,"RTSP/1\.0\x20403\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20
+SF:AirTunes/860\.7\.1\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-RequestRe
+SF:ceivedTimestamp:\x20203806007\r\n\r\n")%r(HTTPOptions,8F,"HTTP/1\.1\x20
+SF:403\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/860\.7\
+SF:.1\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-RequestReceivedTimestamp:
+SF:\x20203811009\r\n\r\n")%r(FourOhFourRequest,8F,"HTTP/1\.1\x20403\x20For
+SF:bidden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/860\.7\.1\r\nX-Ap
+SF:ple-ProcessingTime:\x200\r\nX-Apple-RequestReceivedTimestamp:\x20203811
+SF:029\r\n\r\n")%r(SIPOptions,A1,"RTSP/1\.0\x20403\x20Forbidden\r\nContent
+SF:-Length:\x200\r\nServer:\x20AirTunes/860\.7\.1\r\nCSeq:\x2042\x20OPTION
+SF:S\r\nX-Apple-ProcessingTime:\x200\r\nX-Apple-RequestReceivedTimestamp:\
+SF:x20203811051\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port7000-TCP:V=7.95%I=7%D=6/23%Time=68597AA2%P=aarch64-unknown-linux-gn
+SF:u%r(RTSPRequest,8F,"RTSP/1\.0\x20403\x20Forbidden\r\nContent-Length:\x2
+SF:00\r\nServer:\x20AirTunes/860\.7\.1\r\nX-Apple-ProcessingTime:\x201\r\n
+SF:X-Apple-RequestReceivedTimestamp:\x20203805977\r\n\r\n")%r(GetRequest,8
+SF:F,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20
+SF:AirTunes/860\.7\.1\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-RequestRe
+SF:ceivedTimestamp:\x20203811004\r\n\r\n")%r(HTTPOptions,8F,"HTTP/1\.1\x20
+SF:403\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/860\.7\
+SF:.1\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-RequestReceivedTimestamp:
+SF:\x20203811027\r\n\r\n")%r(FourOhFourRequest,8F,"HTTP/1\.1\x20403\x20For
+SF:bidden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/860\.7\.1\r\nX-Ap
+SF:ple-ProcessingTime:\x200\r\nX-Apple-RequestReceivedTimestamp:\x20203811
+SF:045\r\n\r\n")%r(SIPOptions,A1,"RTSP/1\.0\x20403\x20Forbidden\r\nContent
+SF:-Length:\x200\r\nServer:\x20AirTunes/860\.7\.1\r\nCSeq:\x2042\x20OPTION
+SF:S\r\nX-Apple-ProcessingTime:\x200\r\nX-Apple-RequestReceivedTimestamp:\
+SF:x20203811056\r\n\r\n");
+MAC Address: 7C:61:30:DE:E0:7D (Apple)
+Device type: general purpose
+Running: Apple macOS 12.X
+OS CPE: cpe:/o:apple:mac_os_x:12
+OS details: Apple macOS 12 (Monterey) (Darwin 21.6.0)
+Network Distance: 1 hop
+Service Info: OS: Mac OS X; CPE: cpe:/o:apple:mac_os_x
+
+Host script results:
+|_nbstat: NetBIOS name: MACBOOKAIR-E07D, NetBIOS user: <unknown>, NetBIOS MAC: 7c:61:30:de:e0:7d (Apple)
+|_clock-skew: -5m00s
+| smb2-security-mode: 
+|   3:0:2: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2025-06-23T15:59:47
+|_  start_date: N/A
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.55 ms 192.168.31.182
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jun 23 21:35:02 2025 -- 1 IP address (1 host up) scanned in 151.26 seconds
 
