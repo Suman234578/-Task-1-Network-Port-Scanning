@@ -19,7 +19,8 @@ SYN-ACK received → Port is open.
 RST received → Port is closed.
 No response or ICMP unreachable → Port is filtered.
 
-so the result of the previous command is not appropiate so i used thsi instead of that
+so the result of the previous command is not appropiate so i used thsi instead of that i used this command from my own and the target is my own system i attached the scan result as an .txt file
+nmap -A  192.168.31.182  --min-rate=5000 -oN scan_results.txt
 
 | Flag                   | Meaning                                                                  |
 | ---------------------- | ------------------------------------------------------------------------ |
