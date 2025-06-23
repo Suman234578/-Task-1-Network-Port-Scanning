@@ -18,3 +18,14 @@ This is also known as a "half-open" scan because Nmap sends a SYN packet (used t
 SYN-ACK received → Port is open.
 RST received → Port is closed.
 No response or ICMP unreachable → Port is filtered.
+
+so the result of the previous command is not appropiate so i used thsi instead of that
+
+| Flag                   | Meaning                                                                  |
+| ---------------------- | ------------------------------------------------------------------------ |
+| `-A`                   | Enables OS detection, version detection, script scanning, and traceroute |
+| `192.168.31.182`       | Target IP address                                                        |
+| `--min-rate=5000`      | Sends packets as fast as possible (minimum 5000 packets per second)      |
+| `-oN scan_results.txt` | Saves output in normal format to `scan_results.txt`                      |
+
+i got some services and its version and os type and also the device information which is used to gather more info about the target system.
